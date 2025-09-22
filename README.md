@@ -1,2 +1,62 @@
-# task1-data-cleaning-and-processing
-hello! this is my first work.....
+# Task 1 - Data Cleaning and Preprocessing (Netflix Dataset)
+
+###  Dataset
+- **Name:** Netflix Movies and TV Shows  
+- **Source:** [Kaggle](https://www.kaggle.com/shivamb/netflix-shows)  
+- **Raw File Used:** `netflix_titles.csv`  
+
+---
+
+##  Steps Performed
+
+### 1. Data Inspection
+- Loaded dataset (`8,807 rows × 12 columns`).
+- Checked column info, null values, and duplicates.
+
+### 2. Missing Values Handling
+- Dropped rows with missing `title`.
+- Filled missing `country` with `"Unknown"`.
+- Filled missing `rating` with `"Not Rated"`.
+- Filled missing `date_added` with the most frequent value (mode).
+
+### 3. Duplicate Removal
+- Removed duplicate rows.
+
+### 4. Data Standardization
+- Standardized `type` column > `"Movie"` / `"Tv Show"`.
+- Trimmed extra spaces in text columns.
+
+### 5. Date Conversion
+- Converted `date_added` to proper `datetime` format.
+
+### 6. Column Cleaning
+- Renamed column names > lowercase, underscores instead of spaces.
+
+### 7. Data Type Fix
+- Converted `release_year` to integer type.
+
+---
+
+##  Deliverables
+- `netflix_cleaning.py` > Python script used for cleaning  
+- `netflix_cleaned.csv` > Cleaned dataset  
+- `README.md` > Summary of steps performed  
+
+---
+
+##  Example Output
+After cleaning:  
+
+- Rows reduced (due to dropping nulls & duplicates).  
+- Consistent column names like `show_id`, `type`, `title`, `country`, `release_year`.  
+- No missing values in critical fields.  
+- Dataset ready for **analysis / visualization / modeling**.  
+
+---
+
+##  Learning Outcomes
+- Learned to handle missing values, duplicates, and inconsistent formats.  
+- Practiced text standardization and column cleaning.  
+- Improved confidence in preprocessing real-world datasets.  
+
+
